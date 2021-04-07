@@ -1,0 +1,9 @@
+.searchForm{ 
+    display:flex;
+    justify-content: flex-end;
+}
+
+input{
+    margin-left: 10px;
+    margin-right: 10px;
+}

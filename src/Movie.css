@@ -1,0 +1,19 @@
+.movie{
+    background-color:rgb(95, 187, 95);
+    color:black;
+    width:150px;
+    height:200px;
+    border:solid black 2px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    justify-content:center;
+}
+
+.moviesContainer{
+    background-color: red;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    margin-top:10px;
+}
