@@ -37,12 +37,12 @@
 			"trailerLink" : "https://www.youtube.com/watch?v=CHekzSiZjrY",
 			"directors" : [ "15" ],
 			"writers" : [ "15" ],
-			"actors" : [ { "id" : 16, "role" : "Jack Dawson" }, { "id" : 17, "role" : "Rose DeWitt Bukater" } ]
+			"actors" : [ { "id" : 16, "role" : "Jack Dawson" }, { "id" : 12, "role" : "Rose DeWitt Bukater" } ]
 		},
 		{
 			"_id" : "4",
 			"title" : "L'Ordre et la Morale",
-			"synopsis" : "L'histoire des événements qui ont eu lieu dans la grotte d'Ouvéa, lors de l'assaut des troupes militaires françaises, après la prise d'otages par les indépendantistes Kanaks de neuf gendarmes mobiles en 1988, entre les deux tours de l'élection présidentielle.",
+			"synopsis" : "L'histoire des événements qui ont eu lieu dans la grotte d'Ouvéa, lors de l'assaut des troupes militaires françaises",
 			"releaseDate" : "2011",
 			"genre" : [ "drama", "action", "history" ],
 			"duration" : 136,
@@ -68,7 +68,7 @@
         {
 			"_id" : "6",
 			"title" : "Rocky Balboa",
-			"synopsis" : "Rocky vit une existence vide, l'amour de sa vie n'est plus là et il entretient un relation lointaine avec son fils. Il décide alors de se remettre à la boxe.",
+			"synopsis" : "Rocky vit une existence vide, l'amour de sa vie n'est plus là et il entretient un relation lointaine avec son fils.",
 			"releaseDate" : "2006",
 			"genre" : [ "drama", "sport" ],
 			"duration" : 102,
@@ -81,7 +81,7 @@
         {
 			"_id" : "7",
 			"title" : "Le Dictateur",
-			"synopsis" : "Dans un ghetto juif vit un petit barbier juif qui ressemble énormément à Adenoid Hynkel, le dictateur de Tomania qui a décidé l'extermination du peuple juif. Au cours d'une rafle, le barbier est arrêté en compagnie de Schultz, un farouche adversaire d'Hynkel.",
+			"synopsis" : "Dans un ghetto juif vit un petit barbier juif qui ressemble énormément à Adenoid Hynkel, le dictateur de Tomania qui a décidé l'extermination du peuple juif.",
 			"releaseDate" : "1945",
 			"genre" : [ "comedy", "drama", "war" ],
 			"duration" : 180,
@@ -89,7 +89,7 @@
 			"trailerLink" : "https://www.youtube.com/watch?v=kj3Rekc-qe4",
 			"directors" : ["7"],
 			"writers" : [ "7" ],
-			"actors" : [ { "id" : 7, "role" : "le barbier juif / Adenoïd Hynkel, le dictateur de la Tomainia" } ]
+			"actors" : [ { "id" : 7, "role" : "le barbier juif" } ]
 		},
 		{
 			"_id" : "8",
@@ -100,22 +100,22 @@
 			"duration" : 132,
 			"posterLink" : "https://m.media-amazon.com/images/M/MV5BOTI5ODc3NzExNV5BMl5BanBnXkFtZTcwNzYxNzQzMw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
 			"trailerLink" : "https://www.youtube.com/watch?v=hmbQgEHGpLg",
-			"directors" : [ "18" ],
-			"writers" : [ "19" ],
+			"directors" : [ "13" ],
+			"writers" : [ "14" ],
 			"actors" : [{ "id" : 8, "role" : "Evey Hammond"}]
 		},
 		{
 			"_id" : "9",
 			"title" : "Into the wild",
-			"synopsis" : " After graduating from Emory University, top student and athlete Christopher McCandless abandons his possessions, gives his entire $24,000 savings account to charity and hitchhikes to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters that shape his life. ",
+			"synopsis" : " After graduating from Emory University, top student and athlete Christopher McCandless abandons his possessions. ",
 			"releaseDate" : "2007",
 			"genre" : [ "aventure", "drama", "biography" ],
 			"duration" : 148,
 			"posterLink" : "https://m.media-amazon.com/images/M/MV5BMTAwNDEyODU1MjheQTJeQWpwZ15BbWU2MDc3NDQwNw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
 			"trailerLink" : "https://www.youtube.com/watch?v=XZG1FzyB8DI",
-			"directors" : [ "20" ],
-			"writers" : [ "20" ],
-			"actors" : [ { "id" : 21, "role" : "Christopher McCandless"} ]
+			"directors" : [ "15" ],
+			"writers" : [ "15" ],
+			"actors" : [ { "id" : 16, "role" : "Christopher McCandless"} ]
 		},
 		{
 			"_id" : "10",
@@ -127,7 +127,7 @@
 			"posterLink" : "https://m.media-amazon.com/images/M/MV5BOTgwMzFiMWYtZDhlNS00ODNkLWJiODAtZDVhNzgyNzJhYjQ4L2ltYWdlXkEyXkFqcGdeQXVyNzEzOTYxNTQ@._V1_UX182_CR0,0,182,268_AL_.jpg",
 			"trailerLink" : "https://www.youtube.com/watch?v=nuPZUUED5uk",
 			"directors" : [ "10" ],
-			"writers" : [ "22" ],
+			"writers" : [ "12" ],
 			"actors" : [ { "id" : 9, "role" : "Alan Turing"} ]
 		}
 	],
@@ -275,60 +275,6 @@
 			"birthDate" : "",
 			"deathDate" : "",
 			"picture" : ""
-		},
-		{
-			"_id" : "17",
-			"lastname" : "Winslet",
-			"firstname" : "Kate",
-			"biography" : "",
-			"birthDate" : "",
-			"deathDate" : "",
-			"picture" : ""
-		},
-		{
-			"_id" : "18",
-			"lastname" : "McTeigue",
-			"firstname" : "James",
-			"biography" : "",
-			"birthDate" : "",
-			"deathDate" : "",
-			"picture" : ""
-		},
-		{
-			"_id" : "19",
-			"lastname" : "Wachowski",
-			"firstname" : "",
-			"biography" : "",
-			"birthDate" : "",
-			"deathDate" : "",
-			"picture" : ""
-		},
-		{
-			"_id" : "20",
-			"lastname" : "Penn",
-			"firstname" : "Sean",
-			"biography" : "",
-			"birthDate" : "",
-			"deathDate" : "",
-			"picture" : ""
-		},
-		{
-			"_id" : "21",
-			"lastname" : "Hirsch",
-			"firstname" : "Emile",
-			"biography" : "",
-			"birthDate" : "",
-			"deathDate" : "",
-			"picture" : ""
-		},
-		{
-			"_id" : "22",
-			"lastname" : "Moore",
-			"firstname" : "Graham",
-			"biography" : "",
-			"birthDate" : "",
-			"deathDate" : "",
-			"picture" : ""
-		}			 
+		}		
 	]
 }
