@@ -5,12 +5,12 @@
 			"title" : "Ironman",
 			"synopsis" : "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
 			"releaseDate" : "2008",
-			"genre" : [ "sf" ],
-			"duration" : 120,
+			"genre" : [ "fantastique" ],
+			"duration" : 126,
 			"posterLink" : "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_.jpg",
 			"trailerLink" : "https://www.youtube.com/watch?v=EcZIzpvRTlU",
 			"directors" : [ "1" ],
-			"writers" : [ ],
+			"writers" : [  "11" ],
 			"actors" : [ { "id" : 1, "role" : "Hogan" }, { "id" : 2, "role" : "Tony Stark" } ]
 		},
 		{
@@ -18,13 +18,13 @@
 			"title" : "Guardians of the Galaxy",
 			"synopsis" : "A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe.",
 			"releaseDate" : "2014",
-			"genre" : [ "sf" ],
-			"duration" : 180,
+			"genre" : [ "fantastique" ],
+			"duration" : 125,
 			"posterLink" : "https://m.media-amazon.com/images/M/MV5BMjA3ODU4MDUyMl5BMl5BanBnXkFtZTgwNTE2OTkzMTE@._V1_.jpg",
 			"trailerLink" : "https://www.youtube.com/watch?v=HbB1LC_QyK0",
-			"directors" : [ "1" ],
-			"writers" : [ ],
-			"actors" : [ ]
+			"directors" : [ "12" ],
+			"writers" : [ "12","13" ],
+			"actors" : [ { "id" : 14, "role" : "Peter Jason Quill" } ]
 		},
 		{
 			"_id" : "3",
@@ -32,12 +32,12 @@
 			"synopsis" : "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
 			"releaseDate" : "1997",
 			"genre" : [ "drama", "romance" ],
-			"duration" : 180,
-			"posterLink" : "https://m.media-amazon.com/images/M/MV5BMjA3ODU4MDUyMl5BMl5BanBnXkFtZTgwNTE2OTkzMTE@._V1_.jpg",
-			"trailerLink" : "https://www.youtube.com/watch?v=HbB1LC_QyK0",
-			"directors" : [ "1" ],
-			"writers" : [ ],
-			"actors" : [ ]
+			"duration" : 195,
+			"posterLink" : "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX182_CR0,0,182,268_AL_.jpg",
+			"trailerLink" : "https://www.youtube.com/watch?v=CHekzSiZjrY",
+			"directors" : [ "15" ],
+			"writers" : [ "15" ],
+			"actors" : [ { "id" : 16, "role" : "Jack Dawson" }, { "id" : 17, "role" : "Rose DeWitt Bukater" } ]
 		},
 		{
 			"_id" : "4",
@@ -45,12 +45,12 @@
 			"synopsis" : "L'histoire des événements qui ont eu lieu dans la grotte d'Ouvéa, lors de l'assaut des troupes militaires françaises, après la prise d'otages par les indépendantistes Kanaks de neuf gendarmes mobiles en 1988, entre les deux tours de l'élection présidentielle.",
 			"releaseDate" : "2011",
 			"genre" : [ "drama", "action", "history" ],
-			"duration" : 180,
-			"posterLink" : "",
+			"duration" : 136,
+			"posterLink" : "https://m.media-amazon.com/images/M/MV5BZmRkNzcyODEtZmFkZS00MDgyLTg0M2QtMzM0ZmY2Nzc5MmI4XkEyXkFqcGdeQXVyODAwMTU1MTE@._V1_UX182_CR0,0,182,268_AL_.jpg",
 			"trailerLink" : "https://www.youtube.com/watch?v=79STXXLK6oA",
-			"directors" : [{ "id" : 3, "role" : "Philippe Legorjus" }],
-			"writers" : [ ],
-			"actors" : [ "3" ]
+			"directors" : [ "3" ],
+			"writers" : [ "3" ],
+			"actors" : [ { "id" : 3, "role" : "Philippe Legorjus" } ]
 		},
         {
 			"_id" : "5",
@@ -58,12 +58,12 @@
 			"synopsis" : "Une histoire d'amour entre Jon Martello, un séducteur accro au 'porno' et Barbara Sugarman, une fille formatée par l'image du Prince charmant...",
 			"releaseDate" : "2013",
 			"genre" : [ "comedy", "drama", "romance" ],
-			"duration" : 180,
-			"posterLink" : "",
+			"duration" : 90,
+			"posterLink" : "https://m.media-amazon.com/images/M/MV5BN2ZhY2IzMWQtMGU4MC00ODg2LThkNWMtNWMzYmM2OTc5ZDMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
 			"trailerLink" : "https://www.youtube.com/watch?v=2A63Ly0Pvpk",
-			"directors" : [{ "id" : 4, "role" : "Jonny Martello" }],
-			"writers" : [ ],
-			"actors" : [ "4", "5" ]
+			"directors" : [ "4" ],
+			"writers" : [ "4" ],
+			"actors" : [ { "id" : 4, "role" : "Jonny Martello" }, { "id" : 5, "role" : "Barbara Sugarman"  }]
 		},
         {
 			"_id" : "6",
@@ -71,12 +71,12 @@
 			"synopsis" : "Rocky vit une existence vide, l'amour de sa vie n'est plus là et il entretient un relation lointaine avec son fils. Il décide alors de se remettre à la boxe.",
 			"releaseDate" : "2006",
 			"genre" : [ "drama", "sport" ],
-			"duration" : 180,
-			"posterLink" : "",
+			"duration" : 102,
+			"posterLink" : "https://m.media-amazon.com/images/M/MV5BNWIyNmQyNjctYmVmMS00MGI4LWIxMmUtNjA0ODYzOTA0Yjk0L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UY268_CR6,0,182,268_AL_.jpg",
 			"trailerLink" : "https://www.youtube.com/watch?v=8tab8fK2_3w",
-			"directors" : [ { "id" : 6, "role" : "" }],
-			"writers" : [ ],
-			"actors" : [ "6"]
+			"directors" : [ "6" ],
+			"writers" : [ "6" ],
+			"actors" : [ { "id" : 6, "role" : "Robert « Rocky » Balboa" } ]
 		},
         {
 			"_id" : "7",
@@ -85,37 +85,37 @@
 			"releaseDate" : "1945",
 			"genre" : [ "comedy", "drama", "war" ],
 			"duration" : 180,
-			"posterLink" : "",
+			"posterLink" : "https://m.media-amazon.com/images/M/MV5BMmExYWJjNTktNGUyZS00ODhmLTkxYzAtNWIzOGEyMGNiMmUwXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg",
 			"trailerLink" : "https://www.youtube.com/watch?v=kj3Rekc-qe4",
-			"directors" : [{ "id" : 7, "role" : "" }],
-			"writers" : [ ],
-			"actors" : [ "7"]
+			"directors" : ["7"],
+			"writers" : [ "7" ],
+			"actors" : [ { "id" : 7, "role" : "le barbier juif / Adenoïd Hynkel, le dictateur de la Tomainia" } ]
 		},
 		{
 			"_id" : "8",
 			"title" : "V pour Vendetta",
 			"synopsis" : "Londres, au 21ème siècle... Evey Hammond ne veut rien oublier de l'homme qui lui sauva la vie et lui permit de dominer ses peurs les plus lointaines",
 			"releaseDate" : "1945",
-			"genre" : [ "sf", "action" ],
-			"duration" : 190,
-			"posterLink" : "",
-			"trailerLink" : "",
-			"directors" : [ "" ],
-			"writers" : [ ],
-			"actors" : [ "8" ]
+			"genre" : [ "fantastique", "action" ],
+			"duration" : 132,
+			"posterLink" : "https://m.media-amazon.com/images/M/MV5BOTI5ODc3NzExNV5BMl5BanBnXkFtZTcwNzYxNzQzMw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+			"trailerLink" : "https://www.youtube.com/watch?v=hmbQgEHGpLg",
+			"directors" : [ "18" ],
+			"writers" : [ "19" ],
+			"actors" : [{ "id" : 8, "role" : "Evey Hammond"}]
 		},
 		{
 			"_id" : "9",
-			"title" : "V pour Vendetta",
-			"synopsis" : "Londres, au 21ème siècle... Evey Hammond ne veut rien oublier de l'homme qui lui sauva la vie et lui permit de dominer ses peurs les plus lointaines",
-			"releaseDate" : "1945",
-			"genre" : [ "sf", "action" ],
-			"duration" : 190,
-			"posterLink" : "",
-			"trailerLink" : "https://www.youtube.com/watch?v=hmbQgEHGpLg",
-			"directors" : [ "" ],
-			"writers" : [ ],
-			"actors" : [ "8" ]
+			"title" : "Into the wild",
+			"synopsis" : " After graduating from Emory University, top student and athlete Christopher McCandless abandons his possessions, gives his entire $24,000 savings account to charity and hitchhikes to Alaska to live in the wilderness. Along the way, Christopher encounters a series of characters that shape his life. ",
+			"releaseDate" : "2007",
+			"genre" : [ "aventure", "drama", "biography" ],
+			"duration" : 148,
+			"posterLink" : "https://m.media-amazon.com/images/M/MV5BMTAwNDEyODU1MjheQTJeQWpwZ15BbWU2MDc3NDQwNw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+			"trailerLink" : "https://www.youtube.com/watch?v=XZG1FzyB8DI",
+			"directors" : [ "20" ],
+			"writers" : [ "20" ],
+			"actors" : [ { "id" : 21, "role" : "Christopher McCandless"} ]
 		},
 		{
 			"_id" : "10",
@@ -123,12 +123,12 @@
 			"synopsis" : "1940 : Alan Turing, mathématicien, cryptologue, est chargé par le gouvernement Britannique de percer le secret de la célèbre machine de cryptage allemande Enigma, réputée inviolable.",
 			"releaseDate" : "2015",
 			"genre" : [ "biopic", "drama" ],
-			"duration" : 190,
-			"posterLink" : "",
+			"duration" : 116,
+			"posterLink" : "https://m.media-amazon.com/images/M/MV5BOTgwMzFiMWYtZDhlNS00ODNkLWJiODAtZDVhNzgyNzJhYjQ4L2ltYWdlXkEyXkFqcGdeQXVyNzEzOTYxNTQ@._V1_UX182_CR0,0,182,268_AL_.jpg",
 			"trailerLink" : "https://www.youtube.com/watch?v=nuPZUUED5uk",
 			"directors" : [ "10" ],
-			"writers" : [ ],
-			"actors" : [ "9"]
+			"writers" : [ "22" ],
+			"actors" : [ { "id" : 9, "role" : "Alan Turing"} ]
 		}
 	],
 	"peoples" : [
@@ -221,6 +221,114 @@
 			"birthDate" : "",
 			"deathDate" : "",
 			"picture" : ""
-		}
+		},
+		{
+			"_id" : "11",
+			"lastname" : "Holloway",
+			"firstname" : "Matt",
+			"biography" : "",
+			"birthDate" : "",
+			"deathDate" : "",
+			"picture" : ""
+		},
+		{
+			"_id" : "12",
+			"lastname" : "Gunn",
+			"firstname" : "James",
+			"biography" : "",
+			"birthDate" : "",
+			"deathDate" : "",
+			"picture" : ""
+		},
+		{
+			"_id" : "13",
+			"lastname" : "Perlman",
+			"firstname" : "Nicole",
+			"biography" : "",
+			"birthDate" : "",
+			"deathDate" : "",
+			"picture" : ""
+		},
+		{
+			"_id" : "14",
+			"lastname" : "Pratt",
+			"firstname" : "Chris",
+			"biography" : "",
+			"birthDate" : "",
+			"deathDate" : "",
+			"picture" : ""
+		},
+		{
+			"_id" : "15",
+			"lastname" : "Cameron",
+			"firstname" : "James",
+			"biography" : "",
+			"birthDate" : "",
+			"deathDate" : "",
+			"picture" : ""
+		},
+		{
+			"_id" : "16",
+			"lastname" : "DiCaprio",
+			"firstname" : "Leonardo",
+			"biography" : "",
+			"birthDate" : "",
+			"deathDate" : "",
+			"picture" : ""
+		},
+		{
+			"_id" : "17",
+			"lastname" : "Winslet",
+			"firstname" : "Kate",
+			"biography" : "",
+			"birthDate" : "",
+			"deathDate" : "",
+			"picture" : ""
+		},
+		{
+			"_id" : "18",
+			"lastname" : "McTeigue",
+			"firstname" : "James",
+			"biography" : "",
+			"birthDate" : "",
+			"deathDate" : "",
+			"picture" : ""
+		},
+		{
+			"_id" : "19",
+			"lastname" : "Wachowski",
+			"firstname" : "",
+			"biography" : "",
+			"birthDate" : "",
+			"deathDate" : "",
+			"picture" : ""
+		},
+		{
+			"_id" : "20",
+			"lastname" : "Penn",
+			"firstname" : "Sean",
+			"biography" : "",
+			"birthDate" : "",
+			"deathDate" : "",
+			"picture" : ""
+		},
+		{
+			"_id" : "21",
+			"lastname" : "Hirsch",
+			"firstname" : "Emile",
+			"biography" : "",
+			"birthDate" : "",
+			"deathDate" : "",
+			"picture" : ""
+		},
+		{
+			"_id" : "22",
+			"lastname" : "Moore",
+			"firstname" : "Graham",
+			"biography" : "",
+			"birthDate" : "",
+			"deathDate" : "",
+			"picture" : ""
+		}			 
 	]
 }
