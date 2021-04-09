@@ -1,0 +1,18 @@
+.titleMovieDetails{
+    /* background-color: pink; */
+    text-align:center;
+}
+.imgActorDetails{
+    /* background-color: pink; */
+    width:400px;
+    height:500px;
+}
+.divActorDetailsInfos1{
+    display:flex;
+}
+.infosActorDetails{
+    /* border:solid pink 2px;  */
+    display:flex;
+    flex-direction:column;
+    margin-left:10px;
+}

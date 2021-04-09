@@ -10,7 +10,7 @@
 			"posterLink" : "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_.jpg",
 			"trailerLink" : "https://www.youtube.com/watch?v=EcZIzpvRTlU",
 			"directors" : [ "1" ],
-			"writers" : [  "11" ],
+			"writers" : [  "8" ],
 			"actors" : [ { "id" : 1, "role" : "Hogan" }, { "id" : 2, "role" : "Tony Stark" } ]
 		},
 		{
@@ -22,9 +22,9 @@
 			"duration" : 125,
 			"posterLink" : "https://m.media-amazon.com/images/M/MV5BMjA3ODU4MDUyMl5BMl5BanBnXkFtZTgwNTE2OTkzMTE@._V1_.jpg",
 			"trailerLink" : "https://www.youtube.com/watch?v=HbB1LC_QyK0",
-			"directors" : [ "12" ],
-			"writers" : [ "12","13" ],
-			"actors" : [ { "id" : 14, "role" : "Peter Jason Quill" } ]
+			"directors" : [ "9" ],
+			"writers" : [ "9","7" ],
+			"actors" : [ { "id" : 6, "role" : "Peter Jason Quill" } ]
 		},
 		{
 			"_id" : "3",
@@ -35,9 +35,9 @@
 			"duration" : 195,
 			"posterLink" : "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX182_CR0,0,182,268_AL_.jpg",
 			"trailerLink" : "https://www.youtube.com/watch?v=CHekzSiZjrY",
-			"directors" : [ "15" ],
-			"writers" : [ "15" ],
-			"actors" : [ { "id" : 16, "role" : "Jack Dawson" }, { "id" : 12, "role" : "Rose DeWitt Bukater" } ]
+			"directors" : [ "8" ],
+			"writers" : [ "8" ],
+			"actors" : [ { "id" : 5, "role" : "Jack Dawson" }, { "id" : 4, "role" : "Rose DeWitt Bukater" } ]
 		},
 		{
 			"_id" : "4",
@@ -100,35 +100,9 @@
 			"duration" : 132,
 			"posterLink" : "https://m.media-amazon.com/images/M/MV5BOTI5ODc3NzExNV5BMl5BanBnXkFtZTcwNzYxNzQzMw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
 			"trailerLink" : "https://www.youtube.com/watch?v=hmbQgEHGpLg",
-			"directors" : [ "13" ],
-			"writers" : [ "14" ],
+			"directors" : [ "9" ],
+			"writers" : [ "8" ],
 			"actors" : [{ "id" : 8, "role" : "Evey Hammond"}]
-		},
-		{
-			"_id" : "9",
-			"title" : "Into the wild",
-			"synopsis" : " After graduating from Emory University, top student and athlete Christopher McCandless abandons his possessions. ",
-			"releaseDate" : "2007",
-			"genre" : [ "aventure", "drama", "biography" ],
-			"duration" : 148,
-			"posterLink" : "https://m.media-amazon.com/images/M/MV5BMTAwNDEyODU1MjheQTJeQWpwZ15BbWU2MDc3NDQwNw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
-			"trailerLink" : "https://www.youtube.com/watch?v=XZG1FzyB8DI",
-			"directors" : [ "15" ],
-			"writers" : [ "15" ],
-			"actors" : [ { "id" : 16, "role" : "Christopher McCandless"} ]
-		},
-		{
-			"_id" : "10",
-			"title" : "Immitation game",
-			"synopsis" : "1940 : Alan Turing, mathématicien, cryptologue, est chargé par le gouvernement Britannique de percer le secret de la célèbre machine de cryptage allemande Enigma, réputée inviolable.",
-			"releaseDate" : "2015",
-			"genre" : [ "biopic", "drama" ],
-			"duration" : 116,
-			"posterLink" : "https://m.media-amazon.com/images/M/MV5BOTgwMzFiMWYtZDhlNS00ODNkLWJiODAtZDVhNzgyNzJhYjQ4L2ltYWdlXkEyXkFqcGdeQXVyNzEzOTYxNTQ@._V1_UX182_CR0,0,182,268_AL_.jpg",
-			"trailerLink" : "https://www.youtube.com/watch?v=nuPZUUED5uk",
-			"directors" : [ "10" ],
-			"writers" : [ "12" ],
-			"actors" : [ { "id" : 9, "role" : "Alan Turing"} ]
 		}
 	],
 	"peoples" : [
@@ -154,127 +128,64 @@
 			"_id" : "3",
 			"lastname" : "Kassovitz",
 			"firstname" : "Mathieu",
-			"biography" : "",
+			"biography" : "Sa mère est française catholique, issue d'une famille ouvrière rémoise. Son père est français juif, d'origine hongroise (il a quitté la Hongrie pour Paris en 1956 au moment de l'insurrection de Budapest)1. Son père joue l'organisateur de la galerie d'art dans le film La Haine.",
 			"birthDate" : "19670803",
 			"deathDate" : "",
-			"picture" : ""
+			"picture" : "https://m.media-amazon.com/images/M/MV5BMzIwMzIzMzE3NF5BMl5BanBnXkFtZTYwNzcwODU1._V1_UX214_CR0,0,214,317_AL_.jpg"
 		},
 		{
 			"_id" : "4",
 			"lastname" : "Gordon-Levitt",
 			"firstname" : "Joseph",
-			"biography" : "",
+			"biography" : "Joseph Gordon-Levitt (/ˈd͡ʒoʊsəf ˈgɔɹdən ˈlɛvɪt/) est un acteur, réalisateur, scénariste, producteur et chanteur américain, né le 17 février 1981 à Los Angeles (Californie).",
 			"birthDate" : "19810217",
 			"deathDate" : "",
-			"picture" : ""
+			"picture" : "https://m.media-amazon.com/images/M/MV5BMTY3NTk0NDI3Ml5BMl5BanBnXkFtZTgwNDA3NjY0MjE@._V1_UY317_CR3,0,214,317_AL_.jpg"
 		},
 		{
 			"_id" : "5",
 			"lastname" : "Johansson",
 			"firstname" : "Scarlett",
-			"biography" : "",
+			"biography" : "Scarlett Johansson est une actrice, réalisatrice, scénariste, productrice de cinéma et chanteuse américano-danoise, née le 22 novembre 1984 à Manhattan (New York)1.",
 			"birthDate" : "19841122",
 			"deathDate" : "",
-			"picture" : ""
+			"picture" : "https://m.media-amazon.com/images/M/MV5BMTM3OTUwMDYwNl5BMl5BanBnXkFtZTcwNTUyNzc3Nw@@._V1_UY317_CR23,0,214,317_AL_.jpg"
 		},
 		{
 			"_id" : "6",
 			"lastname" : "Stallone",
 			"firstname" : "Sylvester",
-			"biography" : "",
-			"birthDate" : "",
+			"biography" : "À partir du milieu des années 1980, il s'oriente vers les productions à gros budget : les suites de Rambo, Tango et Cash, Cliffhanger, Demolition Man ou encore la série de films Expendables.",
+			"birthDate" : "19460706",
 			"deathDate" : "",
-			"picture" : ""
+			"picture" : "https://m.media-amazon.com/images/M/MV5BMTQwMTk3NDU2OV5BMl5BanBnXkFtZTcwNTA3MTI0Mw@@._V1_UY317_CR6,0,214,317_AL_.jpg"
 		},
 		{
 			"_id" : "7",
 			"lastname" : "Chaplin",
 			"firstname" : "Charlie",
-			"biography" : "",
-			"birthDate" : "",
+			"biography" : "Charles Spencer Chaplin, dit Charlie Chaplin [ˈt͡ʃɑːli ˈt͡ʃæplɪn]n 1, né le 16 avril 1889 probablement à Londres (Royaume-Uni) et mort le 25 décembre 1977 à Corsier-sur-Vevey (Suisse), est un acteur, réalisateur, scénariste, producteur et compositeur britannique",
+			"birthDate" : "18890416",
 			"deathDate" : "",
-			"picture" : ""
+			"picture" : "https://m.media-amazon.com/images/M/MV5BNDcwMDc0ODAzOF5BMl5BanBnXkFtZTgwNTY2OTI1MDE@._V1_UX214_CR0,0,214,317_AL_.jpg"
 		},
 		{
 			"_id" : "8",
 			"lastname" : "Portman",
 			"firstname" : "Natalie",
-			"biography" : "",
-			"birthDate" : "",
+			"biography" : "Neta-Lee Hershlag, dite Natalie Portman, Hébreu: נטע-לי הרשלג /ˈnætəli ˈpɔɹtmən/1, née le 9 juin 1981 à Jérusalem, est une actrice, productrice et réalisatrice israélo-américaine.",
+			"birthDate" : "19810609",
 			"deathDate" : "",
-			"picture" : ""
+			"picture" : "https://m.media-amazon.com/images/M/MV5BMTQ3ODE3Mjg1NV5BMl5BanBnXkFtZTcwNzA4ODcxNA@@._V1_UY317_CR11,0,214,317_AL_.jpg"
 		},
 		{
 			"_id" : "9",
-			"lastname" : "Cumberbatch",
-			"firstname" : "Benedict",
-			"biography" : "",
-			"birthDate" : "",
+			"lastname" : "Jolie",
+			"firstname" : "Angelina",
+			"biography" : "Angelina Jolie [ænd͡ʒeˈliːnɪ d͡ʒoʊˈliː]2, née le 4 juin 1975 à Los Angeles, est une actrice, réalisatrice, scénariste, productrice, mannequin, écrivaine et ambassadrice de bonne volonté américano-cambodgienne.",
+			"birthDate" : "19750604",
 			"deathDate" : "",
-			"picture" : ""
-		},
-		{
-			"_id" : "10",
-			"lastname" : "Tyldum",
-			"firstname" : "Morten",
-			"biography" : "",
-			"birthDate" : "",
-			"deathDate" : "",
-			"picture" : ""
-		},
-		{
-			"_id" : "11",
-			"lastname" : "Holloway",
-			"firstname" : "Matt",
-			"biography" : "",
-			"birthDate" : "",
-			"deathDate" : "",
-			"picture" : ""
-		},
-		{
-			"_id" : "12",
-			"lastname" : "Gunn",
-			"firstname" : "James",
-			"biography" : "",
-			"birthDate" : "",
-			"deathDate" : "",
-			"picture" : ""
-		},
-		{
-			"_id" : "13",
-			"lastname" : "Perlman",
-			"firstname" : "Nicole",
-			"biography" : "",
-			"birthDate" : "",
-			"deathDate" : "",
-			"picture" : ""
-		},
-		{
-			"_id" : "14",
-			"lastname" : "Pratt",
-			"firstname" : "Chris",
-			"biography" : "",
-			"birthDate" : "",
-			"deathDate" : "",
-			"picture" : ""
-		},
-		{
-			"_id" : "15",
-			"lastname" : "Cameron",
-			"firstname" : "James",
-			"biography" : "",
-			"birthDate" : "",
-			"deathDate" : "",
-			"picture" : ""
-		},
-		{
-			"_id" : "16",
-			"lastname" : "DiCaprio",
-			"firstname" : "Leonardo",
-			"biography" : "",
-			"birthDate" : "",
-			"deathDate" : "",
-			"picture" : ""
-		}		
+			"picture" : "https://m.media-amazon.com/images/M/MV5BODg3MzYwMjE4N15BMl5BanBnXkFtZTcwMjU5NzAzNw@@._V1_UY317_CR22,0,214,317_AL_.jpg"
+		}
 	]
 }

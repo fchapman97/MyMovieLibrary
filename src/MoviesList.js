@@ -1,8 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import {
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
+import './MoviesList.css';
 
 function MoviesList(props) {
   const [error, setError] = useState(null);
@@ -30,18 +29,33 @@ function MoviesList(props) {
 
   return (
     <div>
-      <h3>Liste des films</h3>
+      <h1 className="titleTouslesFilms">Tous les films</h1>
       { !isLoaded 
         ? ( <div>Chargement...</div> ) 
         : (
-          <div id="moviesContainer">
+          <div id="moviesListContainer">
             {
               movies.map(movie => (
-                <p key={movie._id}>
-                  <Link to={`/movieDetails?id=${movie._id}`}>
-                    <span>{movie._id} {movie.title}</span>
-                  </Link>
-                </p>
+                <div id={movie._id} className="divOneMovie">
+                  <img src={movie.posterLink} className="imgOneMovie"/>
+                  <div className="infosOneMovie">
+                    <Link to={`/movieDetails?id=${movie._id}`} className="titleOneMovie">  
+                      <span className="titleOneMovie">TITLE : {movie.title}</span>
+                    </Link>
+                    <span className="genreOneMovie">Genre :
+                      {
+                        movie.genre.map(genre => (
+                          <span> {genre}</span>
+                        ))  
+                      }
+                    </span>
+                    <span className="durationOneMovie">Duration : {movie.duration} minutes</span>
+                    <span className="synopsisOneMovie">Synopsis : {movie.synopsis}</span>
+                    <Link to={`/movieDetails?id=${movie._id}`} className="linkRegarderOneMovie">  
+                      <button className="boutonRegarderOneMovie">Regarder {movie.title}</button>
+                    </Link>                    
+                  </div>   
+                </div>
               ))
             }
           </div>

@@ -1,4 +1,20 @@
-.moviesContainer{
-  background-color:black;
-  color:white;
+.routerContainer{
+   /* border:solid blue 2px;  */
+   margin-left:70px;
+   margin-right:70px;
 }
+
+.linksContainer{
+  height:70px;
+  margin-bottom: 30px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* border:solid red 2px; */
+}
+
+.divLink{
+  /* border:solid green 2px; */
+}
+

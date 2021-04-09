@@ -3,19 +3,14 @@ import { useState, useEffect } from 'react';
 import {
   Link
 } from "react-router-dom";
-import './DirectorsList.css';
+import './WritersList.css';
 
-function DirectorsList(props) {
+function WritersList(props) {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [peoples, setPeoples] = useState([]);
   const [movies, setMovies] = useState([]);
-  const [tab, setTab] = useState([]);
   
-  function addItem(item){
-      setTab(item);
-  }
-
   // Fetching data
   console.log(`"Fetching movies and people from ${process.env.REACT_APP_SERVER_API}...`);
   useEffect(() => {
@@ -49,38 +44,37 @@ function DirectorsList(props) {
 
   return (
     <div>
-      <h1 className="titleTouslesProducteurs">Tous les producteurs</h1>
+      <h1 className="titleTouslesScenaristes">Tous les scénaristes</h1>
       { !isLoaded 
         ? ( <div>Chargement...</div> ) 
         : (
-          <div className="directorsListContainer">
+          <div id="writersContainer">
             {
               movies.map(movie => (
                 <p key={movie._id}>
                   {
-                    movie.directors.map(director => (
+                    movie.writers.map(writer => (
                       <div>
                       {
                         peoples.map(people => (
                           <p key={people._id}>
-                            { director ===  people._id
+                            { writer ===  people._id
                             ? ( 
-                              //<span>{people._id} {people.firstname} {people.lastname}</span>    
-                                                        
-                              /////////////////////
+                              //<span>{people._id} {people.firstname} {people.lastname}</span>                              
+                              ///////////////////////
 
-                              <div key={people._id} className="divOneDirector">
-                                <img src={people.picture} className="imgOneDirector"/>
-                                <div className="infosOneDirector">
-                                  <Link to={`/directorDetails?id=${people._id}`}>
-                                    <span className="nomPrenomOneDirector">{people.lastname} {people.firstname}</span>                                        
+                              <div key={people._id} className="divOneWriter">
+                                <img src={people.picture} className="imgOneWriter"/>
+                                <div className="infosOneWriter">
+                                  <Link to={`/writerDetails?id=${people._id}`}>
+                                    <span className="nomPrenomOneWriter">{people.lastname} {people.firstname}</span>                                        
                                   </Link>
-                                  <span className="metierOneDirector">Metier : producteur</span>
-                                  <span className="naissanceOneDirector">Naissance : {people.birthDate}</span>
+                                  <span className="metierOneWriter">Metier : scnénariste</span>
+                                  <span className="naissanceOneWriter">Naissance : {people.birthDate}</span>
                                 </div>
                               </div>
 
-                              /////////////////////
+                              ///////////////////////
                               ) 
                             : (
                                 <div></div>
@@ -102,4 +96,4 @@ function DirectorsList(props) {
   );
 }
 
-export default DirectorsList;
+export default WritersList;

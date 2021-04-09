@@ -1,4 +1,26 @@
-.header{
+.headerContainer{
     background-color:rgb(95, 187, 95);
     color:black;
+    /* border : solid black 2px; */
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
+.headerTitle{
+    margin-left:30px;
+}
+.logButton{
+    margin-right:30px;
+}
+/*
+.headerTitle,.searchForm,.logButton{
+    border : solid red 2px;
+}
+
+
+.searchForm{
+    justify-content: center;
+}
+
+*/

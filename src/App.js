@@ -10,67 +10,74 @@ import ActorDetails from './ActorDetails';
 import MoviesList from './MoviesList';
 import MovieDetails from './MovieDetails';
 import DirectorsList from './DirectorsList';
-
-/*
-import './App.css';
-import Login from './Login/Login';
-import Movie from './Movie';
-import Search from './Search';
+import DirectorDetails from './DirectorDetails';
+import WritersList from './WritersList';
+import WriterDetails from './WriterDetails';
+import Accueil from './Accueil';
 import Header from './Header';
-import Sort from './Sort';
-*/
+import './App.css';
     
 export default function App() {
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Accueil</Link>
-            </li>
-            <li>
-              <Link to="/movies">Films</Link>
-            </li>
-            <li>
-              <Link to="/actors">Acteurs</Link>
-            </li>
-            <li>
-              <Link to="/directors">Producteur</Link>
-            </li>
-          </ul>
-        </nav>
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/movies">
-            <MoviesList />
-          </Route>
-          <Route path="/movieDetails">
-            <MovieDetails />
-          </Route>
-          <Route path="/actors">
-            <ActorsList />
-          </Route>
-          <Route path="/actorDetails">
-            <ActorDetails />
-          </Route>
-          <Route path="/directors">
-            <DirectorsList />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+    <div>
+      <Header />
+      <div className="routerContainer">
+        <Router>        
+            <nav>
+              <div className="linksContainer">
+                <div className="divLink">
+                  <Link to="/">Accueil</Link>
+                </div>                
+                <div className="divLink">
+                  <Link to="/movies">Films</Link>
+                </div>
+                <div className="divLink">
+                  <Link to="/actors">Acteurs</Link>
+                </div>
+                <div className="divLink">
+                  <Link to="/directors">Producteur</Link>
+                </div>
+                <div className="divLink">
+                  <Link to="/writers">Scénariste</Link>
+                </div>
+              </div>
+            </nav>
+            {/* A <Switch> looks through its children <Route>s and
+                renders the first one that matches the current URL. */}
+            <Switch>
+              <Route path="/movies">
+                <MoviesList />
+              </Route>
+              <Route path="/movieDetails">
+                <MovieDetails />
+              </Route>
+              <Route path="/actors">
+                <ActorsList />
+              </Route>
+              <Route path="/actorDetails">
+                <ActorDetails />
+              </Route>
+              <Route path="/directors">
+                <DirectorsList />
+              </Route>
+              <Route path="/directorDetails">
+                <DirectorDetails />
+              </Route>
+              <Route path="/writers">
+                <WritersList />
+              </Route>
+              <Route path="/writerDetails">
+                <WriterDetails />
+              </Route>
+              <Route path="/">
+                <Accueil />
+              </Route>
+            </Switch>
+        </Router>
       </div>
-    </Router>
+    </div>
   );
 }
-
-function Home() {
-  return <h2>Home</h2>;
-}
-
   /*
   function App() {
     const [movies, setMovies] = useState([]);

@@ -1,0 +1,18 @@
+.titleMovieDetails{
+    /* background-color: pink; */
+    text-align:center;
+}
+.imgMovieDetails{
+    /* border:solid yellow 2px;  */
+    width:400px;
+    height:500px;
+}
+.infosMovieDetails{
+    /* border:solid pink 2px;  */
+    display:flex;
+    flex-direction:column;
+    margin-left:10px;
+}
+.divMovieDetailsInfos1{
+    display:flex;
+}

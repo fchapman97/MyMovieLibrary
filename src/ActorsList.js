@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import {
   Link
 } from "react-router-dom";
+import './ActorsList.css';
 
 function ActorsList(props) {
   const [error, setError] = useState(null);
@@ -30,18 +31,23 @@ function ActorsList(props) {
 
   return (
     <div className="actorsContainer">
-      <h3>Liste des acteurs</h3>
+      <h1 className="titleTouslesActeurs">Tous les acteurs</h1>
       { !isLoaded 
         ? ( <div>Chargement...</div> ) 
         : (
-          <div>
+          <div className="actorsListContainer">
             {
               actors.map(actor => (
-                <p key={actor._id}>
-                  <Link to={`/actorDetails?id=${actor._id}`}>
-                    <span>{actor._id} {actor.lastname} {actor.firstname}</span>
-                  </Link>
-                </p>
+                <div key={actor._id} className="divOneActor">
+                  <img src={actor.picture} className="imgOneActor"/>
+                  <div className="infosOneActor">
+                    <Link to={`/actorDetails?id=${actor._id}`}>
+                      <span className="nomPrenomOneActor">{actor.lastname} {actor.firstname}</span>                                        
+                    </Link>
+                    <span className="metierOneActor">Metier : acteur</span>
+                    <span className="naissanceOneActor">Naissance : {actor.birthDate}</span>
+                  </div>
+                </div>
               ))
             }
           </div>

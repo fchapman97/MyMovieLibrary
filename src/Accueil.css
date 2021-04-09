@@ -1,0 +1,26 @@
+.accueilContainer{
+    /* border : solid yellow 3px; */
+    display:flex;
+    flex-direction: row;
+}
+.divContainerDeTri{
+    border : solid black 3px;
+    display:flex;
+    flex-direction: column;
+}
+.divDeTri{
+    /* border : solid pink 3px; */
+    width:200px;
+    height:100px;
+}
+.divContainerFilms{
+    border : solid black 3px;
+}
+.divDeFilm{
+    border : solid pink 3px;
+    width:200px;
+    height:100px;
+}
+.typeTri{
+    text-decoration: underline;
+}

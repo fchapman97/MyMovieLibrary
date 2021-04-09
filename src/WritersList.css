@@ -1,0 +1,32 @@
+.titleTouslesScenaristes{
+    /* background-color: pink; */
+    text-align:center;
+}
+.writersListContainer{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.divOneWriter{
+    /* border: solid black 2px; */
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    margin-right: 70px;
+}
+
+.imgOneWriter{
+    /* border:solid yellow 2px; */
+    width:150px;
+    height:200px;
+}
+.infosOneWriter{
+    /* border:solid yellow 2px; */
+    display:flex;
+    flex-direction:column;
+    margin-left:15px;
+}
+
+
+

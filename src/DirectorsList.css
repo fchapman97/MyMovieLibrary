@@ -1,0 +1,32 @@
+.titleTouslesProducteurs{
+    /* background-color: pink; */
+    text-align:center;
+}
+.directorsListContainer{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.divOneDirector{
+    /* border: solid black 2px; */
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    margin-right: 70px;
+}
+
+.imgOneDirector{
+    /* border:solid yellow 2px; */
+    width:150px;
+    height:200px;
+}
+.infosOneDirector{
+    /* border:solid yellow 2px; */
+    display:flex;
+    flex-direction:column;
+    margin-left:15px;
+}
+
+
+

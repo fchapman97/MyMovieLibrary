@@ -1,0 +1,18 @@
+.titleMovieDetails{
+    /* background-color: pink; */
+    text-align:center;
+}
+.imgWriterDetails{
+    /* background-color: pink; */
+    width:400px;
+    height:500px;
+}
+.divWriterDetailsInfos1{
+    display:flex;
+}
+.infosWriterDetails{
+    /* border:solid pink 2px;  */
+    display:flex;
+    flex-direction:column;
+    margin-left:10px;
+}

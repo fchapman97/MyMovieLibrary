@@ -3,30 +3,30 @@ import { useState, useEffect } from 'react';
 import {
   useLocation
 } from "react-router-dom";
-import './ActorDetails.css';
+import './WriterDetails.css';
 
-function ActorDetails(props) {
+function WriterDetails(props) {
   let query = new URLSearchParams(useLocation().search);
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [actor, setActor] = useState([]);
+  const [writer, setWriter] = useState([]);
   const [movies, setMovies] = useState([]);
-  let currentActorId = query.get("id");
+  let currentWriterId = query.get("id");
 
   // Fetching data
   useEffect(() => {
     console.log('Query : ', query);
-    console.log(`Actor ID : ${currentActorId}`);
-    console.log(`Fetching actor details from ${process.env.REACT_APP_SERVER_API}...`);
+    console.log(`Writer ID : ${currentWriterId}`);
+    console.log(`Fetching writer details from ${process.env.REACT_APP_SERVER_API}...`);
 
-    fetch(`${process.env.REACT_APP_SERVER_API}/peoples?_id=${currentActorId}`)
+    fetch(`${process.env.REACT_APP_SERVER_API}/peoples?_id=${currentWriterId}`)
       .then(res => res.json())
       .then(
         (result) => {
           console.log("Result : ", result);
           setIsLoaded(true);
-          setActor(result[0]);
-          console.log("Actor : ", actor);
+          setWriter(result[0]);
+          console.log("Writer : ", writer);
         },
         (error) => {
           setIsLoaded(true);
@@ -46,7 +46,7 @@ function ActorDetails(props) {
           setError(error);
         }
       )
-      console.log("Fetching actor details OK !");
+      console.log("Fetching writer details OK !");
   }, [])
 
   if (error) {
@@ -54,33 +54,33 @@ function ActorDetails(props) {
   } else if (!isLoaded) {
     return <div>Chargement...</div>;
   } else {
-    console.log("ACTOR OKK : ", actor);
+    console.log("WRITER OKK : ", writer);
     return (
       <div>
-        <h1 className="nomPrenomActorDetails">{actor.firstname} {actor.lastname}</h1>
-        <div className="divActorDetailsInfos1">
-          <img src={actor.picture} className="imgActorDetails"/>
-          <div className="infosActorDetails">
-            <span>Métier : acteur</span> 
-            <span>Naissance : {actor.birthDate}</span> 
+        <h1 className="nomPrenomWriterDetails">{writer.firstname} {writer.lastname}</h1>
+        <div className="divWriterDetailsInfos1">
+          <img src={writer.picture} className="imgDWriterDetails"/>
+          <div className="infosWriterDetails">
+            <span>Métier : scénariste</span> 
+            <span>Naissance : {writer.birthDate}</span> 
             <span>Nombre de films :</span> 
           </div>
         </div>
-        <div className="divActorDetailsInfos2">
-          <div className="actorDetailsFilmographie">
-            <h2>Filmographie</h2>
+        <div className="divDWriterDetailsInfos2">
+          <div className="writerDetailsRealisations">
+            <h2>Oeuvres</h2>
             {/* <span>Film 1</span>
             <span>Film 2</span> */}
               {
                 movies.map(movie => (
                   <span>
                   {
-                    movie.actors.map(newActor => (
-                      //<span>[{newActor.id}]</span>
+                    movie.writers.map(newWriter => (
+                      // <span>[{newWriter}]</span>
                       <span>
-                        { newActor.id == currentActorId
+                        { newWriter == currentWriterId
                         ? ( 
-                            <span> {movie.title}</span>                            
+                            <span>{movie.title} * </span>                            
                           ) 
                         : (
                             <span></span>
@@ -89,7 +89,7 @@ function ActorDetails(props) {
                       </span>
                     ))  
                   } 
-                  {/* <span>[{movie.actors[0].id}]</span> */}
+                  {/* <span>[{movie.writer[0].id}]</span> */}
                   </span>
                 ))  
               } 
@@ -100,4 +100,4 @@ function ActorDetails(props) {
   }
 }
 
-export default ActorDetails;
+export default WriterDetails;

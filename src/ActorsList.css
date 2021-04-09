@@ -1,0 +1,32 @@
+.titleTouslesActeurs{
+    /* background-color: pink; */
+    text-align:center;
+}
+.actorsListContainer{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.divOneActor{
+    /* border: solid black 2px; */
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    margin-right: 70px;
+}
+
+.imgOneActor{
+    /* border:solid yellow 2px; */
+    width:150px;
+    height:200px;
+}
+.infosOneActor{
+    /* border:solid yellow 2px; */
+    display:flex;
+    flex-direction:column;
+    margin-left:15px;
+}
+
+
+
