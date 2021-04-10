@@ -63,7 +63,8 @@ function DirectorDetails(props) {
           <div className="infosDirectorDetails">
             <span>Métier : producteur</span> 
             <span>Naissance : {director.birthDate}</span> 
-            <span>Nombre de films :</span> 
+            <span>Biographie : {director.biography}</span> 
+            {/* <span>Nombre de films :</span>  */}
           </div>
         </div>
         <div className="divDirectorDetailsInfos2">

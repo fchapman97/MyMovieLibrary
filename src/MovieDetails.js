@@ -4,16 +4,19 @@ import {
   useLocation
 } from "react-router-dom";
 import './MovieDetails.css';
+import YouTube from 'react-youtube';
+import getVideoId from 'get-video-id';
 
 function MovieDetails(props) {
   let query = new URLSearchParams(useLocation().search);
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [peoplesAreLoaded, setPeoplesAreLoaded] = useState(false);
   const [movie, setMovie] = useState([]);
   const [peoples, setPeoples] = useState([]);
-  const [actors, setActors] = useState([]);
   let movieId = query.get("id");
-  let actorIds = [];
+  //let {  } = {};
+  let lien = '';
 
   // Fetching data
   useEffect(() => {
@@ -40,15 +43,15 @@ function MovieDetails(props) {
       .then(
         (result) => {
           console.log("Result movies : ", result);
-          setPeoples(result);
-          setIsLoaded(true);          
+          setPeoples(result);          
+          setPeoplesAreLoaded(true); 
         },        
         (error) => {
-          setIsLoaded(true);
+          setPeoplesAreLoaded(true);
           setError(error);
         }
       )
-      console.log("Fetching movie details OK !");
+      lien = movie.trailerLink;
   }, [])
 
   // console.log("Movie OOOKKK : ", movie.actors[0].id);
@@ -57,7 +60,7 @@ function MovieDetails(props) {
 
   if (error) {
     return <div>Erreur : {error.message}</div>;
-  } else if (!isLoaded) {
+  } else if (!isLoaded || !peoplesAreLoaded ) {
     return <div>Chargement...</div>;
   } else {
     return (
@@ -73,17 +76,18 @@ function MovieDetails(props) {
               <span>
               {
                 movie.genre && movie.genre.map(newGenre => (
-                  <span> {newGenre}</span>
+                  <span key={movie.id}> {newGenre}</span>
                 ))  
               } 
               </span>
             </span>
-            <span>Réalistaeur :
+            <span>Réalistaeur :            
               {
                 movie.directors && movie.directors.map(directorId => (
+                  // <span>{directorId}</span>  
                   <span>
                   {
-                    peoples && peoples.map(people => (                      
+                    peoples && peoples.map(people => (   
                       <span key={people._id}>
                         { directorId == people._id
                         ? ( 
@@ -130,7 +134,22 @@ function MovieDetails(props) {
         <div className="divMovieDetailsInfos2">
           <div className="divMovieDetailsTrailer">
             <h2>Bande annonce</h2>
-            <span>{movie.trailerLink}</span>
+                { movie.trailerLink
+                ? ( 
+                    //<span> ok </span>
+                    //<span>{movie.trailerLink}</span>
+                    <YouTube videoId={getVideoId(movie.trailerLink).id} />
+                  ) 
+                : (
+                    <span>notOk</span>
+                  )
+                }
+                
+                {/* {lienYT = getVideoId('movie.trailerLink')} */}
+                {/* <span>{getVideoId(movie.trailerLink).id}</span> */}
+               {/* <span>{lien}</span> */}
+              {/* <YouTube videoId={lienYT} /> */}
+              {/* <span>{movie.trailerLink}</span> */}
           </div>
         </div>
       </div>

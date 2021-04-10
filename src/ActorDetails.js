@@ -46,6 +46,13 @@ function ActorDetails(props) {
           setError(error);
         }
       )
+
+      console.log("avant",movies);
+      if(movies){
+        console.log("pendant",movies);
+      }
+      console.log("apres",movies);
+      movies.map(movie => console.log("laaaa",movie));
       console.log("Fetching actor details OK !");
   }, [])
 
@@ -63,24 +70,23 @@ function ActorDetails(props) {
           <div className="infosActorDetails">
             <span>Métier : acteur</span> 
             <span>Naissance : {actor.birthDate}</span> 
-            <span>Nombre de films :</span> 
+            <span>Biographie : {actor.biography}</span> 
+            {/* <span>Nombre de films :</span>  */}
           </div>
         </div>
         <div className="divActorDetailsInfos2">
           <div className="actorDetailsFilmographie">
             <h2>Filmographie</h2>
-            {/* <span>Film 1</span>
-            <span>Film 2</span> */}
               {
                 movies.map(movie => (
                   <span>
                   {
                     movie.actors.map(newActor => (
                       //<span>[{newActor.id}]</span>
-                      <span>
+                      <span key={newActor.id}>
                         { newActor.id == currentActorId
                         ? ( 
-                            <span> {movie.title}</span>                            
+                            <span> {movie.title} *</span>                            
                           ) 
                         : (
                             <span></span>

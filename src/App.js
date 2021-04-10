@@ -25,9 +25,9 @@ export default function App() {
         <Router>        
             <nav>
               <div className="linksContainer">
-                <div className="divLink">
+                {/* <div className="divLink">
                   <Link to="/">Accueil</Link>
-                </div>                
+                </div>                 */}
                 <div className="divLink">
                   <Link to="/movies">Films</Link>
                 </div>
@@ -69,9 +69,9 @@ export default function App() {
               <Route path="/writerDetails">
                 <WriterDetails />
               </Route>
-              <Route path="/">
+              {/* <Route path="/">
                 <Accueil />
-              </Route>
+              </Route> */}
             </Switch>
         </Router>
       </div>

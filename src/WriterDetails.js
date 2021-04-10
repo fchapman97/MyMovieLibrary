@@ -63,7 +63,8 @@ function WriterDetails(props) {
           <div className="infosWriterDetails">
             <span>Métier : scénariste</span> 
             <span>Naissance : {writer.birthDate}</span> 
-            <span>Nombre de films :</span> 
+            <span>Biographie : {writer.biography}</span> 
+            {/* <span>Nombre de films :</span>  */}
           </div>
         </div>
         <div className="divDWriterDetailsInfos2">

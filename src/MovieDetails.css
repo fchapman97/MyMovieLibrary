@@ -16,3 +16,7 @@
 .divMovieDetailsInfos1{
     display:flex;
 }
+.divMovieDetailsInfos2{
+    display:flex;
+    margin-bottom:40px;
+}

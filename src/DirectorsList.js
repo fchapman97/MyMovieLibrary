@@ -10,11 +10,6 @@ function DirectorsList(props) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [peoples, setPeoples] = useState([]);
   const [movies, setMovies] = useState([]);
-  const [tab, setTab] = useState([]);
-  
-  function addItem(item){
-      setTab(item);
-  }
 
   // Fetching data
   console.log(`"Fetching movies and people from ${process.env.REACT_APP_SERVER_API}...`);
@@ -38,7 +33,7 @@ function DirectorsList(props) {
       (result) => {
         console.log("Result movies : ", result);
         setIsLoaded(true);
-        setMovies(result);
+        setMovies(result);  
       },        
       (error) => {
         setIsLoaded(true);
