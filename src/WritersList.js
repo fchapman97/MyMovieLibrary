@@ -4,6 +4,7 @@ import {
   Link
 } from "react-router-dom";
 import './WritersList.css';
+import moment from 'moment';
 
 function WritersList(props) {
   const [error, setError] = useState(null);
@@ -70,7 +71,9 @@ function WritersList(props) {
                                     <span className="nomPrenomOneWriter">{people.lastname} {people.firstname}</span>                                        
                                   </Link>
                                   <span className="metierOneWriter">Metier : scnénariste</span>
-                                  <span className="naissanceOneWriter">Naissance : {people.birthDate}</span>
+                                  <span className="naissanceOneWriter">Naissance :
+                                    {moment(people.birthDate, 'YYYYMMDD').format('MMM Do YY')}    
+                                  </span>
                                 </div>
                               </div>
 

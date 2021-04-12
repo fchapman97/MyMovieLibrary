@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import './MoviesList.css';
+import Trad from './Trad';
 
 function MoviesList(props) {
   const [error, setError] = useState(null);
@@ -36,7 +37,7 @@ function MoviesList(props) {
           <div id="moviesListContainer">
             {
               movies.map(movie => (
-                <div id={movie._id} className="divOneMovie">
+                <div key={movie._id} className="divOneMovie">
                   <img src={movie.posterLink} className="imgOneMovie"/>
                   <div className="infosOneMovie">
                     <Link to={`/movieDetails?id=${movie._id}`} className="titleOneMovie">  
@@ -45,7 +46,7 @@ function MoviesList(props) {
                     <span className="genreOneMovie">Genre :
                       {
                         movie.genre.map(genre => (
-                          <span> {genre}</span>
+                          <span key={genre}> <Trad mot={genre}/></span>
                         ))  
                       }
                     </span>

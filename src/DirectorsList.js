@@ -4,6 +4,7 @@ import {
   Link
 } from "react-router-dom";
 import './DirectorsList.css';
+import moment from 'moment';
 
 function DirectorsList(props) {
   const [error, setError] = useState(null);
@@ -71,7 +72,9 @@ function DirectorsList(props) {
                                     <span className="nomPrenomOneDirector">{people.lastname} {people.firstname}</span>                                        
                                   </Link>
                                   <span className="metierOneDirector">Metier : producteur</span>
-                                  <span className="naissanceOneDirector">Naissance : {people.birthDate}</span>
+                                  <span className="naissanceOneDirector">Naissance : 
+                                    {moment(people.birthDate, 'YYYYMMDD').format('MMM Do YY')}                                    
+                                  </span>
                                 </div>
                               </div>
 

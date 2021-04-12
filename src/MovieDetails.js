@@ -6,6 +6,7 @@ import {
 import './MovieDetails.css';
 import YouTube from 'react-youtube';
 import getVideoId from 'get-video-id';
+import Trad from './Trad';
 
 function MovieDetails(props) {
   let query = new URLSearchParams(useLocation().search);
@@ -15,8 +16,6 @@ function MovieDetails(props) {
   const [movie, setMovie] = useState([]);
   const [peoples, setPeoples] = useState([]);
   let movieId = query.get("id");
-  //let {  } = {};
-  let lien = '';
 
   // Fetching data
   useEffect(() => {
@@ -51,7 +50,6 @@ function MovieDetails(props) {
           setError(error);
         }
       )
-      lien = movie.trailerLink;
   }, [])
 
   // console.log("Movie OOOKKK : ", movie.actors[0].id);
@@ -76,7 +74,7 @@ function MovieDetails(props) {
               <span>
               {
                 movie.genre && movie.genre.map(newGenre => (
-                  <span key={movie.id}> {newGenre}</span>
+                  <span key={newGenre}> <Trad mot={newGenre}/></span>
                 ))  
               } 
               </span>
@@ -85,7 +83,7 @@ function MovieDetails(props) {
               {
                 movie.directors && movie.directors.map(directorId => (
                   // <span>{directorId}</span>  
-                  <span>
+                  <span key={directorId}>
                   {
                     peoples && peoples.map(people => (   
                       <span key={people._id}>
@@ -107,7 +105,7 @@ function MovieDetails(props) {
             <span>Acteurs : 
               {
                 movie.actors && movie.actors.map(actor => (
-                  <span>
+                  <span key={actor._id}>
                   {
                     peoples && peoples.map(people => (
                       <span key={people._id}>
@@ -134,22 +132,14 @@ function MovieDetails(props) {
         <div className="divMovieDetailsInfos2">
           <div className="divMovieDetailsTrailer">
             <h2>Bande annonce</h2>
-                { movie.trailerLink
+                {movie.trailerLink
                 ? ( 
-                    //<span> ok </span>
-                    //<span>{movie.trailerLink}</span>
                     <YouTube videoId={getVideoId(movie.trailerLink).id} />
                   ) 
                 : (
                     <span>notOk</span>
-                  )
+                  )                  
                 }
-                
-                {/* {lienYT = getVideoId('movie.trailerLink')} */}
-                {/* <span>{getVideoId(movie.trailerLink).id}</span> */}
-               {/* <span>{lien}</span> */}
-              {/* <YouTube videoId={lienYT} /> */}
-              {/* <span>{movie.trailerLink}</span> */}
           </div>
         </div>
       </div>

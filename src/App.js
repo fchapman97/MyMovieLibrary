@@ -45,30 +45,14 @@ export default function App() {
             {/* A <Switch> looks through its children <Route>s and
                 renders the first one that matches the current URL. */}
             <Switch>
-              <Route path="/movies">
-                <MoviesList />
-              </Route>
-              <Route path="/movieDetails">
-                <MovieDetails />
-              </Route>
-              <Route path="/actors">
-                <ActorsList />
-              </Route>
-              <Route path="/actorDetails">
-                <ActorDetails />
-              </Route>
-              <Route path="/directors">
-                <DirectorsList />
-              </Route>
-              <Route path="/directorDetails">
-                <DirectorDetails />
-              </Route>
-              <Route path="/writers">
-                <WritersList />
-              </Route>
-              <Route path="/writerDetails">
-                <WriterDetails />
-              </Route>
+              <Route path="/movies"><MoviesList /></Route>
+              <Route path="/movieDetails"><MovieDetails /></Route>
+              <Route path="/actors"><ActorsList /></Route>
+              <Route path="/actorDetails"><ActorDetails /></Route>
+              <Route path="/directors"><DirectorsList /></Route>
+              <Route path="/directorDetails"><DirectorDetails /></Route>
+              <Route path="/writers"><WritersList /></Route>
+              <Route path="/writerDetails"><WriterDetails /></Route>
               {/* <Route path="/">
                 <Accueil />
               </Route> */}

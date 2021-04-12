@@ -4,6 +4,7 @@ import {
   useLocation
 } from "react-router-dom";
 import './DirectorDetails.css';
+import moment from 'moment';
 
 function DirectorDetails(props) {
   let query = new URLSearchParams(useLocation().search);
@@ -62,7 +63,9 @@ function DirectorDetails(props) {
           <img src={director.picture} className="imgDirectorDetails"/>
           <div className="infosDirectorDetails">
             <span>Métier : producteur</span> 
-            <span>Naissance : {director.birthDate}</span> 
+            <span>Naissance : 
+              {moment(director.birthDate, 'YYYYMMDD').format('MMM Do YY')}  
+            </span> 
             <span>Biographie : {director.biography}</span> 
             {/* <span>Nombre de films :</span>  */}
           </div>

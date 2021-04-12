@@ -4,11 +4,15 @@ import {
   Link
 } from "react-router-dom";
 import './ActorsList.css';
+import moment from 'moment';
 
 function ActorsList(props) {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [actors, setActors] = useState([]);
+
+  var theDate = moment("19970413", 'YYYYMMDD').format('MMM Do YY');
+  //console.log("DATE TO SEE : ",theDate);  
 
   // Fetching data
   console.log(`"Fetching people from ${process.env.REACT_APP_SERVER_API}...`);
@@ -45,7 +49,11 @@ function ActorsList(props) {
                       <span className="nomPrenomOneActor">{actor.lastname} {actor.firstname}</span>                                        
                     </Link>
                     <span className="metierOneActor">Metier : acteur</span>
-                    <span className="naissanceOneActor">Naissance : {actor.birthDate}</span>
+                    <span className="naissanceOneActor">Naissance : 
+                      {/* <Moment > */}
+                        {moment(actor.birthDate, 'YYYYMMDD').format('MMM Do YY')}
+                      {/* </Moment> */}
+                    </span>
                   </div>
                 </div>
               ))
