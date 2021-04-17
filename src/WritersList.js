@@ -45,58 +45,86 @@ function WritersList(props) {
 
   return (
     <div>
-      <h1 className="titleTouslesScenaristes">Tous les scénaristes</h1>
-      { !isLoaded 
-        ? ( <div>Chargement...</div> ) 
-        : (
-          <div id="writersContainer">
-            {
-              movies.map(movie => (
-                <p key={movie._id}>
-                  {
-                    movie.writers.map(writer => (
-                      <div>
+      { error 
+        ? ( 
+            <div>
+              <h1 className="titleTouslesFilms">
+                  <div>AUCUN SCENARISTE DISPONIBLE</div> 
+              </h1>
+            </div> )
+        : ( 
+            <div>
+              <h1 className="titleTouslesFilms">
+                <div>TOUS LES SCENARISTES</div> 
+              </h1>
+              { !isLoaded 
+                ? ( <div>Chargement...</div> ) 
+                : (       
+                  <div>   
+                    <Link to={`/addPeople`} className="linkAjouterOnePeople">  
+                      <button className="butonAjouterProducteur">Ajouter un scénariste</button>
+                    </Link> 
+                    <div id="writersContainer">
                       {
-                        peoples.map(people => (
-                          <p key={people._id}>
-                            { writer ===  people._id
-                            ? ( 
-                              //<span>{people._id} {people.firstname} {people.lastname}</span>                              
-                              ///////////////////////
+                        movies && movies.map(movie => (
+                          <p key={movie._id}>
+                            {
+                              movie.writers && movie.writers.map(writer => (
+                                <div key={writer}>
+                                {
+                                  peoples && peoples.map(people => (
+                                    <p key={people._id}>
+                                      { writer ===  people._id
+                                      ? ( 
+                                        //<span>{people._id} {people.firstname} {people.lastname}</span>                              
+                                        ///////////////////////
 
-                              <div key={people._id} className="divOneWriter">
-                                <img src={people.picture} className="imgOneWriter"/>
-                                <div className="infosOneWriter">
-                                  <Link to={`/writerDetails?id=${people._id}`}>
-                                    <span className="nomPrenomOneWriter">{people.lastname} {people.firstname}</span>                                        
-                                  </Link>
-                                  <span className="metierOneWriter">Metier : scnénariste</span>
-                                  <span className="naissanceOneWriter">Naissance :
-                                    {moment(people.birthDate, 'YYYYMMDD').format('MMM Do YY')}    
-                                  </span>
+                                        <div key={people._id} className="divOneWriter">
+                                          <img src={people.picture} className="imgOneWriter"/>
+                                          <div className="infosOneWriter">
+                                            <Link to={`/writerDetails?id=${people._id}`}>
+                                              <span className="nomPrenomOneWriter">{people.lastname} {people.firstname}</span>                                        
+                                            </Link>
+                                            <span className="metierOneWriter">Metier : scénariste</span>
+                                            <span className="naissanceOneWriter">Naissance :
+                                              {moment(people.birthDate, 'YYYYMMDD').format('MMM Do YY')}    
+                                            </span>
+                                          </div>
+                                          <Link to={`/updatePeople?id=${people._id}`} className="linkModifierOnePeople">  
+                                            <button className="boutonModifierOnePeople">Modifier</button>
+                                          </Link>
+                                          <Link to={`/deletePeople?id=${people._id}`} className="linkSupprimerOnePeople">  
+                                            <button className="boutonSupprimerOnePeople">Supprimer</button>
+                                          </Link>
+                                        </div>
+
+                                        ///////////////////////
+                                        ) 
+                                      : (
+                                          <div></div>
+                                        )
+                                      }
+                                    </p>
+                                  ))
+                                }  
                                 </div>
-                              </div>
-
-                              ///////////////////////
-                              ) 
-                            : (
-                                <div></div>
-                              )
-                            }
+                              ))
+                            }                   
                           </p>
                         ))
-                      }  
-                      </div>
-                    ))
-                  }                   
-                </p>
-              ))
-            }
-          </div>
-        )
-      }
+                      }
+                    </div>
+                  </div>
+                )
+              }
+            </div>
+          )
+        }
     </div>
   );
 }
+
+      
+
 
 export default WritersList;

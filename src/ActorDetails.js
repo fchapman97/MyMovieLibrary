@@ -17,17 +17,17 @@ function ActorDetails(props) {
   // Fetching data
   useEffect(() => {
     console.log('Query : ', query);
-    console.log(`Actor ID : ${currentActorId}`);
+    console.log(`Actor ID : ${currentActorId}`); 
     console.log(`Fetching actor details from ${process.env.REACT_APP_SERVER_API}...`);
 
-    fetch(`${process.env.REACT_APP_SERVER_API}/peoples?_id=${currentActorId}`)
+    fetch(`${process.env.REACT_APP_SERVER_API}/peoples/:${currentActorId}`)
       .then(res => res.json())
       .then(
         (result) => {
           console.log("Result : ", result);
           setIsLoaded(true);
           setActor(result[0]);
-          console.log("Actor : ", actor);
+          console.log("ActorICI : ", actor);
         },
         (error) => {
           setIsLoaded(true);
@@ -48,13 +48,13 @@ function ActorDetails(props) {
         }
       )
 
-      console.log("avant",movies);
-      if(movies){
-        console.log("pendant",movies);
-      }
-      console.log("apres",movies);
-      movies.map(movie => console.log("laaaa",movie));
-      console.log("Fetching actor details OK !");
+      // console.log("avant",movies);
+      // if(movies){
+      //   console.log("pendant",movies);
+      // }
+      // console.log("apres",movies);
+      // movies.map(movie => console.log("laaaa",movie));
+      // console.log("Fetching actor details OK !");
   }, [])
 
   if (error) {
@@ -62,7 +62,7 @@ function ActorDetails(props) {
   } else if (!isLoaded) {
     return <div>Chargement...</div>;
   } else {
-    console.log("ACTOR OKK : ", actor);
+    // console.log("ACTOR OKK : ", actor);
     return (
       <div>
         <h1 className="nomPrenomActorDetails">{actor.firstname} {actor.lastname}</h1>
@@ -81,10 +81,10 @@ function ActorDetails(props) {
           <div className="actorDetailsFilmographie">
             <h2>Filmographie</h2>
               {
-                movies.map(movie => (
+                movies && movies.map(movie => (
                   <span>
                   {
-                    movie.actors.map(newActor => (
+                    movie.actors && movie.actors.map(newActor => (
                       //<span>[{newActor.id}]</span>
                       <span key={newActor.id}>
                         { newActor.id == currentActorId

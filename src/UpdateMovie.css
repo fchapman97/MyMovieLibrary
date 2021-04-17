@@ -1,0 +1,17 @@
+.divUpdateMovie{
+    color:blue;
+}
+
+.divForm{
+    display:flex;
+    flex-direction:column;
+}
+
+.form{
+    display:flex;
+    flex-direction:column;
+}
+
+.inputEnvoyer{
+    width:100px;
+}

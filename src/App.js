@@ -13,16 +13,23 @@ import DirectorsList from './DirectorsList';
 import DirectorDetails from './DirectorDetails';
 import WritersList from './WritersList';
 import WriterDetails from './WriterDetails';
+import UpdateMovie from './UpdateMovie';
+import PeopleEditPage from './PeopleEditPage';
+import PeopleDeletePage from './PeopleDeletePage';
+import MovieDeletePage from './MovieDeletePage';
+import PeopleAddPage from './PeopleAddPage';
+import MovieAddPage from './MovieAddPage';
 import Accueil from './Accueil';
 import Header from './Header';
+
 import './App.css';
     
-export default function App() {
+function App(props) {
   return (
     <div>
       <Header />
       <div className="routerContainer">
-        <Router>        
+        <Router>              
             <nav>
               <div className="linksContainer">
                 {/* <div className="divLink">
@@ -41,7 +48,7 @@ export default function App() {
                   <Link to="/writers">Scénariste</Link>
                 </div>
               </div>
-            </nav>
+            </nav>       
             {/* A <Switch> looks through its children <Route>s and
                 renders the first one that matches the current URL. */}
             <Switch>
@@ -53,148 +60,18 @@ export default function App() {
               <Route path="/directorDetails"><DirectorDetails /></Route>
               <Route path="/writers"><WritersList /></Route>
               <Route path="/writerDetails"><WriterDetails /></Route>
-              {/* <Route path="/">
-                <Accueil />
-              </Route> */}
+              <Route path="/updateMovie"><UpdateMovie /></Route>
+              <Route path="/addMovie"><MovieAddPage /></Route>
+              <Route path="/deleteMovie"><MovieDeletePage /></Route>              
+              <Route path="/updatePeople"><PeopleEditPage /></Route>
+              <Route path="/addPeople"><PeopleAddPage /></Route>
+              <Route path="/deletePeople"><PeopleDeletePage /></Route>
+              {/* <Route path="/"><Accueil /></Route> */}
             </Switch>
         </Router>
       </div>
     </div>
   );
 }
-  /*
-  function App() {
-    const [movies, setMovies] = useState([]);
-    let filteredMovies = [];
-    let sortedMovies = [];
-    let searchField = 'Ironman';
-    let sortField = 'aventure';
 
-    fetch('https://my-json-server.typicode.com/fchapman97/MyMovieLibrary/movies')
-    .then((response) => response.json())
-    .then((json) => 
-      //console.log(json)
-      setMovies(json)
-    );
-      
-    filteredMovies = movies.filter(movie =>(
-      movie.title.toLowerCase().includes(searchField.toLowerCase())
-    ));
-
-    sortedMovies = movies.filter(movie =>(
-      movie.genre.toString().toLowerCase().includes(sortField.toLowerCase())
-    ));
-
-    return (
-      <div className="container">
-        <Header />
-        <Sort 
-          handleChange={(e) => sortField = e.target.value}
-        />
-        <Search 
-          placeholder="Search a movie"
-          handleChange={(e) => searchField = e.target.value}
-        />  
-        <div id="moviesContainer">
-          {
-            movies.map(movie => (
-              <Movie movie={movie}/>
-            ))
-          }
-        </div>
-      </div>
-    )
-  }  
-  
-  function AffichageListMovies(props) {
-    return(
-      <div className="moviesContainer">
-          <Movie movie={props.listMovies}/>       
-      </div>
-    );
-  }
-
-  /*
-  class App extends React.Component {
-    constructor(){
-      super();
-      this.state = {
-        movies:[],
-        filteredMovies:[],
-        sortedMovies:[],
-        searchField:'',
-        sortField:'aventure',
-        isSorted:'false',
-        newMovies: []
-      }
-    }
-  
-    render(){
-      let token;
-      const isSort = this.state.isSorted;
-
-      // const dataMovies = [
-      //   {id: 1, title: 'Titre 1', categorie:'Fantastique', desc: 'Desc 1'},
-      //   {id: 2, title: 'Inception', categorie:'Action', desc: 'Desc 2'},
-      //   {id: 3, title: 'Immitation game', categorie:'Aventure', desc: 'Desc 3'},
-      //   {id: 4, title: 'Vikings', categorie:'Fantastique', desc: 'Desc 4'},
-      //   {id: 5, title: 'Titre 5', categorie:'Romantique', desc: 'Desc 5'},
-      //   {id: 6, title: 'Titre 6', categorie:'Fantastique', desc: 'Desc 6'},
-      // ];
-    
-      // this.state.filteredMovies = dataMovies.filter(movie =>(
-      //   movie.title.toLowerCase().includes(this.state.searchField.toLowerCase())
-      // ))
-      // this.state.sortedMovies = dataMovies.filter(movie =>(
-      //   movie.categorie.toLowerCase().includes(this.state.sortField.toLowerCase())
-      // ));
-
-      fetch('https://my-json-server.typicode.com/fchapman97/MyMovieLibrary/movies')
-      .then((response) => response.json())
-      .then((json) => 
-        //console.log(json)
-        this.setState({newMovies: json})
-      );
-        
-      this.state.filteredMovies = this.state.newMovies.filter(movie =>(
-        movie.title.toLowerCase().includes(this.state.searchField.toLowerCase())
-      ));
-
-      this.state.sortedMovies = this.state.newMovies.filter(movie =>(
-        movie.genre.toString().toLowerCase().includes(this.state.sortField.toLowerCase())
-      ));
-
-      if(token) {
-        return <Login />
-      } 
-  
-      return (
-        <div className="container">
-          <Header />
-          <Sort 
-            handleChange={(e) => this.setState({sortField:e.target.value})}
-          />
-          <Search 
-            placeholder="Search a movie"
-            handleChange={(e) => this.setState({searchField:e.target.value})}
-          />  
-          <AffichageListMovies listMovies={this.state.filteredMovies}/>
-          {isSort
-            ? <AffichageListMovies listMovies={this.state.sortedMovies}/>
-            : <AffichageListMovies listMovies={this.state.filteredMovies}/>
-          }
-        </div>
-      )
-    }
-  }
-  
-  function AffichageListMovies(props) {
-    return(
-      <div className="moviesContainer">
-          <Movie data={props.listMovies}/>       
-      </div>
-    );
-  }
-
-  export default App;
-  */
+export default App;

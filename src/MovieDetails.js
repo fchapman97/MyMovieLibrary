@@ -23,7 +23,7 @@ function MovieDetails(props) {
     console.log(`Movie ID : ${movieId}`);
     //console.log(`Fetching movie details from ${process.env.REACT_APP_SERVER_API}...`);
 
-    fetch(`${process.env.REACT_APP_SERVER_API}/movies?_id=${movieId}`)
+    fetch(`${process.env.REACT_APP_SERVER_API}/movies/:${movieId}`)
       .then(res => res.json())
       .then(
         (result) => {

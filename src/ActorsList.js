@@ -11,17 +11,14 @@ function ActorsList(props) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [actors, setActors] = useState([]);
 
-  var theDate = moment("19970413", 'YYYYMMDD').format('MMM Do YY');
-  //console.log("DATE TO SEE : ",theDate);  
-
   // Fetching data
-  console.log(`"Fetching people from ${process.env.REACT_APP_SERVER_API}...`);
+  console.log(`"Fetching peoples from ${process.env.REACT_APP_SERVER_API}...`);
   useEffect(() => {
     fetch(process.env.REACT_APP_SERVER_API + "/peoples")
       .then(res => res.json())
       .then(
         (result) => {
-          console.log("Result : ", result);
+          console.log("Result PEOPLES : ", result);
           setIsLoaded(true);
           setActors(result);
         },        
@@ -31,36 +28,60 @@ function ActorsList(props) {
         }
       )
   }, [])
-  console.log("Fetching people OK !");
+  console.log("Fetching peoples OK !");
 
   return (
     <div className="actorsContainer">
-      <h1 className="titleTouslesActeurs">Tous les acteurs</h1>
-      { !isLoaded 
-        ? ( <div>Chargement...</div> ) 
-        : (
-          <div className="actorsListContainer">
-            {
-              actors.map(actor => (
-                <div key={actor._id} className="divOneActor">
-                  <img src={actor.picture} className="imgOneActor"/>
-                  <div className="infosOneActor">
-                    <Link to={`/actorDetails?id=${actor._id}`}>
-                      <span className="nomPrenomOneActor">{actor.lastname} {actor.firstname}</span>                                        
-                    </Link>
-                    <span className="metierOneActor">Metier : acteur</span>
-                    <span className="naissanceOneActor">Naissance : 
-                      {/* <Moment > */}
-                        {moment(actor.birthDate, 'YYYYMMDD').format('MMM Do YY')}
-                      {/* </Moment> */}
-                    </span>
+      { error 
+        ? ( 
+            <div>
+              <h1 className="titleTouslesFilms">
+                  <div>AUCUN ACTEUR DISPONIBLE</div> 
+                  {/* <div>{error.status}</div> */}
+              </h1>
+            </div> )
+        : ( 
+          <div>
+            <h1 className="titleTouslesActeurs">
+              <div>Tous les acteurs</div>
+            </h1>
+            { !isLoaded 
+              ? ( <div>Chargement...</div> ) 
+              : (
+                <div>
+                  <Link to={`/addPeople`} className="linkAjouterOnePeople">  
+                    <button className="butonAjouterActeur">Ajouter un acteur</button>
+                  </Link>                  
+                  <div className="actorsListContainer">
+                    {
+                      actors.map(actor => (
+                        <div key={actor._id} className="divOneActor">
+                          <img src={actor.picture} className="imgOneActor"/>
+                          <div className="infosOneActor">
+                            <Link to={`/actorDetails?id=${actor._id}`}>
+                              <span className="nomPrenomOneActor">{actor.lastname} {actor.firstname}</span>                                        
+                            </Link>
+                            <span className="metierOneActor">Metier : acteur</span>
+                            <span className="naissanceOneActor">Naissance : 
+                                {moment(actor.birthDate, 'YYYYMMDD').format('MMM Do YY')}
+                            </span>
+                          </div>
+                          <Link to={`/updatePeople?id=${actor._id}`} className="linkModifierOnePeople">  
+                            <button className="boutonModifierOnePeople">Modifier</button>
+                          </Link>
+                          <Link to={`/deletePeople?id=${actor._id}`} className="linkSupprimerOnePeople">  
+                            <button className="boutonSupprimerOnePeople">Supprimer</button>
+                          </Link>
+                        </div>
+                      ))
+                    }
                   </div>
                 </div>
-              ))
+              )
             }
           </div>
         )
-      }
+      }      
     </div>
   );
 }

@@ -20,7 +20,7 @@ function DirectorDetails(props) {
     console.log(`Director ID : ${currentDirectorId}`);
     console.log(`Fetching director details from ${process.env.REACT_APP_SERVER_API}...`);
 
-    fetch(`${process.env.REACT_APP_SERVER_API}/peoples?_id=${currentDirectorId}`)
+    fetch(`${process.env.REACT_APP_SERVER_API}/peoples/:${currentDirectorId}`)
       .then(res => res.json())
       .then(
         (result) => {
@@ -76,10 +76,10 @@ function DirectorDetails(props) {
             {/* <span>Film 1</span>
             <span>Film 2</span> */}
               {
-                movies.map(movie => (
+                movies && movies.map(movie => (
                   <span>
                   {
-                    movie.directors.map(newDirector => (
+                    movie.directors && movie.directors.map(newDirector => (
                       // <span>[{newDirector}]</span>
                       <span>
                         { newDirector == currentDirectorId

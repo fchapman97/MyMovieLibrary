@@ -45,53 +45,78 @@ function DirectorsList(props) {
 
   return (
     <div>
-      <h1 className="titleTouslesProducteurs">Tous les producteurs</h1>
-      { !isLoaded 
-        ? ( <div>Chargement...</div> ) 
-        : (
-          <div className="directorsListContainer">
-            {
-              movies.map(movie => (
-                <p key={movie._id}>
-                  {
-                    movie.directors.map(director => (
-                      <div>
-                      {
-                        peoples.map(people => (
-                          <p key={people._id}>
-                            { director ===  people._id
-                            ? ( 
-                              //<span>{people._id} {people.firstname} {people.lastname}</span>    
-                                                        
-                              /////////////////////
+      { error 
+        ? ( 
+            <div>
+              <h1 className="titleTouslesFilms">
+                  <div>AUCUN PRODUCTEUR DISPONIBLE</div> 
+              </h1>
+            </div> )
+        : ( 
+          <div>
+            <h1 className="titleTouslesFilms">
+              <div>Tous les producteurs</div> 
+            </h1>
+            { !isLoaded 
+              ? ( <div>Chargement...</div> ) 
+              : (
+                <div>
+                  <Link to={`/addPeople`} className="linkAjouterOnePeople">  
+                    <button className="butonAjouterProducteur">Ajouter un producteur</button>
+                  </Link> 
+                  <div className="directorsListContainer">
+                    {
+                      movies && movies.map(movie => (
+                        <p key={movie._id}>
+                          {
+                            movie.directors && movie.directors.map(director => (
+                              <div>
+                              {
+                                peoples && peoples.map(people => (
+                                  <p key={people._id}>
+                                    { director ===  people._id
+                                    ? ( 
+                                      //<span>{people._id} {people.firstname} {people.lastname}</span>    
+                                                                
+                                      /////////////////////
 
-                              <div key={people._id} className="divOneDirector">
-                                <img src={people.picture} className="imgOneDirector"/>
-                                <div className="infosOneDirector">
-                                  <Link to={`/directorDetails?id=${people._id}`}>
-                                    <span className="nomPrenomOneDirector">{people.lastname} {people.firstname}</span>                                        
-                                  </Link>
-                                  <span className="metierOneDirector">Metier : producteur</span>
-                                  <span className="naissanceOneDirector">Naissance : 
-                                    {moment(people.birthDate, 'YYYYMMDD').format('MMM Do YY')}                                    
-                                  </span>
-                                </div>
+                                      <div key={people._id} className="divOneDirector">
+                                        <img src={people.picture} className="imgOneDirector"/>
+                                        <div className="infosOneDirector">
+                                          <Link to={`/directorDetails?id=${people._id}`}>
+                                            <span className="nomPrenomOneDirector">{people.lastname} {people.firstname}</span>                                        
+                                          </Link>
+                                          <span className="metierOneDirector">Metier : producteur</span>
+                                          <span className="naissanceOneDirector">Naissance : 
+                                            {moment(people.birthDate, 'YYYYMMDD').format('MMM Do YY')}                                    
+                                          </span>
+                                        </div>
+                                        <Link to={`/updatePeople?id=${people._id}`} className="linkModifierOnePeople">  
+                                          <button className="boutonModifierOnePeople">Modifier</button>
+                                        </Link>
+                                        <Link to={`/deletePeople?id=${people._id}`} className="linkSupprimerOnePeople">  
+                                          <button className="boutonSupprimerOnePeople">Supprimer</button>
+                                        </Link>
+                                      </div>
+
+                                      /////////////////////
+                                      ) 
+                                    : (
+                                        <div></div>
+                                      )
+                                    }
+                                  </p>
+                                ))
+                              }  
                               </div>
-
-                              /////////////////////
-                              ) 
-                            : (
-                                <div></div>
-                              )
-                            }
-                          </p>
-                        ))
-                      }  
-                      </div>
-                    ))
-                  }                   
-                </p>
-              ))
+                            ))
+                          }                   
+                        </p>
+                      ))
+                    }
+                  </div>
+                </div>
+              )
             }
           </div>
         )

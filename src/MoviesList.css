@@ -7,7 +7,9 @@
     /* border:solid blue 2px; */
     background-color: pink;
 }
-
+.butonAjouterFilm{
+    margin-bottom:30px;
+}
 .divOneMovie{
     /* border:solid green 2px; */
     display:flex;
@@ -27,7 +29,7 @@
     display:flex;
     flex-direction:column;
 }
-.linkRegarderOneMovie{
+.infosDuBas{
     color:red;
     margin-top:auto;
     height:25px;

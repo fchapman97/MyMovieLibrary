@@ -20,7 +20,7 @@ function WriterDetails(props) {
     console.log(`Writer ID : ${currentWriterId}`);
     console.log(`Fetching writer details from ${process.env.REACT_APP_SERVER_API}...`);
 
-    fetch(`${process.env.REACT_APP_SERVER_API}/peoples?_id=${currentWriterId}`)
+    fetch(`${process.env.REACT_APP_SERVER_API}/peoples/:${currentWriterId}`)
       .then(res => res.json())
       .then(
         (result) => {
@@ -76,10 +76,10 @@ function WriterDetails(props) {
             {/* <span>Film 1</span>
             <span>Film 2</span> */}
               {
-                movies.map(movie => (
+                movies && movies.map(movie => (
                   <span>
                   {
-                    movie.writers.map(newWriter => (
+                    movie.writers && movie.writers.map(newWriter => (
                       // <span>[{newWriter}]</span>
                       <span>
                         { newWriter == currentWriterId
